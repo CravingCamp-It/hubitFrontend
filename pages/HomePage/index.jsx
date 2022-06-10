@@ -1,57 +1,106 @@
-import React,{useState} from 'react'
-import Layout from '../../HOC/Layout/Layout'
-import topCourse from '../../components/Resources/Icons/topCourse.svg';
-import CertifiedTeacher from '../../components/Resources/Icons/CertifiedTeacher.svg';
-import BookandLibraries from '../../components/Resources/Icons/BookandLibraries.svg';
-import CompanyMoto from '../../components/PageComponent/HomePage/Companymoto/Moto'
+import React, { useState } from "react";
+import Layout from "../../HOC/Layout/Layout";
+import topCourse from "../../components/Resources/Icons/topCourse.svg";
+import CertifiedTeacher from "../../components/Resources/Icons/CertifiedTeacher.svg";
+import BookandLibraries from "../../components/Resources/Icons/BookandLibraries.svg";
+import CompanyMoto from "../../components/PageComponent/HomePage/Companymoto/Moto";
+import WelcomePortal from "../../components/PageComponent/HomePage/WelcomePortal/WelcomePortal";
+import image1 from "../../components/Resources/images/Rectangle 25.svg";
+import image2 from "../../components/Resources/images/Rectangle 26aa.svg";
+import images1 from "../../components/Resources/images/python.avif";
+import image from "../../components/Resources/images/Group 7.png";
+import PopularCourses from "../../components/PageComponent/HomePage/PopularCourses/PopularCourses";
+import { TbCertificate } from "react-icons/tb";
+import Home from "./Home";
 function Index() {
-    const [Moto, setMoto] = useState([
-        {
-            icon:topCourse,
-            title:'Top Courses',
-            description:`Lorem Ipsum is simply dummy text of the printing and
+  const [Moto, setMoto] = useState([
+    {
+      icon: <TbCertificate />,
+      title: "Top Courses",
+      description: `Lorem Ipsum is simply dummy text of the printing and
              typesetting industry. Lorem Ipsum has been the industry's standard dummy 
              text ever since the 1500s, when an unknown printer took a galley of type 
              and scrambled it to make a type specimen book. It has survived not only five 
              centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.`
-        },
-        {
-            icon:CertifiedTeacher,
-            title:'Certified Teachers',
-            description:`Lorem Ipsum is simply dummy text of the printing and
+              unchanged.`,
+    },
+    {
+      icon: <TbCertificate />,
+      title: "Certified Teachers",
+      description: `Lorem Ipsum is simply dummy text of the printing and
              typesetting industry. Lorem Ipsum has been the industry's standard dummy 
              text ever since the 1500s, when an unknown printer took a galley of type 
              and scrambled it to make a type specimen book. It has survived not only five 
              centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.`
-        },{
-            icon:BookandLibraries,
-            title:'Book and Libraries',
-            description:`Lorem Ipsum is simply dummy text of the printing and
+              unchanged.`,
+    },
+    {
+      icon: <TbCertificate />,
+      title: "Book and Libraries",
+      description: `Lorem Ipsum is simply dummy text of the printing and
              typesetting industry. Lorem Ipsum has been the industry's standard dummy 
              text ever since the 1500s, when an unknown printer took a galley of type 
              and scrambled it to make a type specimen book. It has survived not only five 
              centuries, but also the leap into electronic typesetting, remaining essentially
-              unchanged.`
-        },
-    ])
-    return (
+              unchanged.Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's standard dummy 
+              text ever since the 1500s, when an unknown printer took a galley of type 
+              and scrambled it to make a type specimen book. It has survived not only five 
+              centuries, but also the leap into electronic typesetting, remaining essentially
+               unchanged.`,
+    },
+  ]);
+  const images = [{ img: image1 }, { img: image2 }];
+  const card = [
+    {
+      img: images1,
+      category_name: "programming",
+      course_name: "python with artificial intelligenc (ai)",
+      duration_type: "3 months",
+    },
+    {
+      img: images1,
+      category_name: "programming",
+      course_name: "python with artificial intelligenc (ai)",
+      duration_type: "3 months",
+    },
+    {
+      img: images1,
+      category_name: "programming",
+      course_name: "python with artificial intelligenc (ai)",
+      duration_type: "3 months",
+    },
+    {
+      img: images1,
+      category_name: "programming",
+      course_name: "python with artificial intelligenc (ai)",
+      duration_type: "3 months",
+    },
+  ];
+
+  return (
+    <div>
+      <Layout>
+        <Home image={image} />
         <div>
-            <Layout>
-                <div>
-                    home page
-                    <div className='grid grid-cols-3'>
-                        {
-                            Moto?.map((val,i)=>{
-                                return <CompanyMoto key={i} title={val.title} description={val.description} icon={val.icon.src} />
-                            })
-                        }
-                    </div>
-                </div>
-            </Layout>
+          <div className="grid grid-cols-2 gap-5  lg:gap-0 xl:gap-0 xl:grid-cols-3 xxl:gap-0 xxl:grid-cols-3">
+            {Moto?.map((val, i) => {
+              return (
+                <CompanyMoto
+                  key={i}
+                  title={val.title}
+                  description={val.description}
+                  icon={val.icon}
+                />
+              );
+            })}
+          </div>
         </div>
-    )
+        <WelcomePortal images={images} />
+        <PopularCourses card={card} />
+      </Layout>
+    </div>
+  );
 }
 
-export default Index
+export default Index;
