@@ -1,6 +1,6 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import Home from './HomePage/index'
+import Head from "next/head";
+import styles from "../styles/Home.module.css";
+import Home from "./HomePage/index";
 export default function Index() {
   return (
     <div className={styles.container}>
@@ -13,5 +13,5 @@ export default function Index() {
         <Home />
       </main>
     </div>
-  )
+  );
 }
