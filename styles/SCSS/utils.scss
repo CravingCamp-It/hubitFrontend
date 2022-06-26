@@ -359,3 +359,26 @@ h6 {
 
   background-color: rgba(160, 4, 125, 1);
 }
+.buttonWidth {
+  width: 570px;
+}
+
+// fonts closed
+// css for slider
+.width {
+  min-width: 100%;
+}
+// scroll to top ko button ko css included gareko
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 50px;
+  background: rgba(160, 4, 125, 1);
+  color: white;
+  cursor: pointer;
+  border-radius: 100px;
+  border: none;
+  box-shadow: 0 5px 10px rgb(156, 62, 136);
+  z-index: 10;
+}

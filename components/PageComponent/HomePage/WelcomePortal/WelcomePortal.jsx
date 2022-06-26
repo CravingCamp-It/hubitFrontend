@@ -5,7 +5,7 @@ import Image from "next/image";
 function WelcomePortal({ images }) {
   return (
     <div>
-      <div className="bg-gray-100 py-5 sm:py-10 xl:py-28 xxl:py-28">
+      <div className="bg-gray-100 py-14 sm:py-10 xl:py-28 xxl:py-28">
         <div
           className="Poppins text-left xl:text-left xxl:text-left capitalize
          py-0 xl:py-3 xxl:py-3 text-gray-800 text-2xl sm:text-3xl md:text-4xl lg:text-3xl xl:text-4xl 
@@ -52,9 +52,9 @@ function WelcomePortal({ images }) {
              xl:w-11/12 xxl:w-11/12 "
           >
             <div className="  bg-re-500  ">
-              <div className="w-72   sm:w-96 lg:w-64 md:w-96 xl:w-80 xxl:w-72">
+              <div className="w-72   sm:w-72 lg:w-64 md:w-96 xl:w-80 xxl:w-72">
                 <div
-                  className="h-72  sm:h-108 cursor-pointer md:h-108 lg:h-94 xl:h-100 xxl:h-98"
+                  className="h-72  sm:h-103 cursor-pointer md:h-108 lg:h-94 xl:h-100 xxl:h-98"
                   style={{
                     // width: "200px",
                     // height: "550px",
@@ -86,7 +86,8 @@ function WelcomePortal({ images }) {
               {images.map((val, i) => {
                 return (
                   <div
-                    className="bg-gree-500 sm:w-64 hovr:scale-105 transition-all duration-300  cursor-pointer ease-in-out w-72 md:w-64 lg:w-40 xl:w-52
+                    key={i}
+                    className="bg-gree-500 sm:w-60 hovr:scale-105 transition-all duration-300  cursor-pointer ease-in-out w-72 md:w-64 lg:w-40 xl:w-52
                    xxl:w-52"
                   >
                     <Image

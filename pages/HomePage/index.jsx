@@ -11,7 +11,14 @@ import images1 from "../../components/Resources/images/python.avif";
 import image from "../../components/Resources/images/Group 7.png";
 import PopularCourses from "../../components/PageComponent/HomePage/PopularCourses/PopularCourses";
 import { TbCertificate } from "react-icons/tb";
+import CoursesSchemSchema from "../../components/PageComponent/HomePage/CourseScheme/CoursesScheme";
 import Home from "./Home";
+import Testimonials from "../../components/PageComponent/HomePage/Testimonials/Testimonials";
+import CallSection from "../../components/PageComponent/HomePage/LetsCallSection/CallSection";
+import WhoWeAre from "../../components/PageComponent/AboutPage/WhoWeAre/WhoWeAre";
+import MIssionVision from "../../components/PageComponent/AboutPage/MissionVision/MIssionVision";
+import WhatWeProvide from "../../components/PageComponent/AboutPage/whatWeProvideSection/WhatWeProvide";
+import WhatClientsSays from "../../components/PageComponent/AboutPage/What ClientsSays/WhatClientsSays";
 function Index() {
   const [Moto, setMoto] = useState([
     {
@@ -83,7 +90,7 @@ function Index() {
       <Layout>
         <Home image={image} />
         <div>
-          <div className="grid grid-cols-2 gap-5  lg:gap-0 xl:gap-0 xl:grid-cols-3 xxl:gap-0 xxl:grid-cols-3">
+          <div className="grid md:grid-cols-2 gap-5  py-10 md:py-0 lg:gap-0 xl:gap-0 xl:grid-cols-3 xxl:gap-0 xxl:grid-cols-3">
             {Moto?.map((val, i) => {
               return (
                 <CompanyMoto
@@ -98,6 +105,13 @@ function Index() {
         </div>
         <WelcomePortal images={images} />
         <PopularCourses card={card} />
+        <CoursesSchemSchema />
+        <Testimonials />
+        <CallSection />
+        <WhoWeAre />
+        <MIssionVision />
+        <WhatWeProvide />
+        <WhatClientsSays />
       </Layout>
     </div>
   );
